@@ -70,14 +70,14 @@
               />
               <div data-thq="thq-navbar-nav" class="navbar8-desktop-menu">
                 <nav class="navbar8-links1">
-                  <a href="https://www.teleporthq.io">
+                  <a href="#">
                     <fragment class="home-fragment10">
                       <span class="home-text10 thq-link thq-body-small">
                         Inicio
                       </span>
                     </fragment>
                   </a>
-                  <a href="https://www.teleporthq.io">
+                  <a href="#">
                     <fragment class="home-fragment11">
                       <span class="home-text11 thq-link thq-body-small">
                         Médicos
@@ -85,7 +85,7 @@
                     </fragment>
                   </a>
                   <a
-                    href="https://www.teleporthq.io"
+                    href="#"
                     target="_blank"
                     rel="noreferrer noopener"
                   >
@@ -105,12 +105,12 @@
                     </span>
                     <div class="navbar8-icon-container1">
                       <div class="navbar8-container2">
-                        <svg viewBox="0 0 1024 1024" class="navbar8-icon10">
+                        <!--<svg viewBox="0 0 1024 1024" class="navbar8-icon10">-->
                           <path d="M298 426h428l-214 214z"></path>
                         </svg>
                       </div>
                       <div class="navbar8-container3">
-                        <svg viewBox="0 0 1024 1024" class="navbar8-icon12">
+                        <!--<svg viewBox="0 0 1024 1024" class="navbar8-icon12">-->
                           <path d="M426 726v-428l214 214z"></path>
                         </svg>
                       </div>
@@ -162,21 +162,21 @@
                     </div>
                   </div>
                   <nav class="navbar8-links2">
-                    <a href="https://www.teleporthq.io">
+                    <a href="#">
                       <fragment class="home-fragment10">
                         <span class="home-text10 thq-link thq-body-small">
                           Inicio
                         </span>
                       </fragment>
                     </a>
-                    <a href="https://www.teleporthq.io">
+                    <a href="#">
                       <fragment class="home-fragment11">
                         <span class="home-text11 thq-link thq-body-small">
                           Médicos
                         </span>
                       </fragment>
                     </a>
-                    <a href="https://www.teleporthq.io">
+                    <a href="#">
                       <fragment class="home-fragment12">
                         <span class="home-text12 thq-link thq-body-small">
                           Turnos
@@ -205,9 +205,8 @@
                           </div>
                         </div>
                       </div>
-                      <!--<div class="navbar8-container6">
-                        <a href="https://www.teleporthq.io">
-                          <div class="navbar8-menu-item1">
+                      <a href="#">
+                        <div class="navbar8-menu-item1">
                             <img
                               alt="image"
                               src="https://images.unsplash.com/photo-1599202889720-cd3c0833efa1?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTcyNDcyMTc2M3w&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"
@@ -231,7 +230,7 @@
                             </div>
                           </div>
                         </a>
-                        <a href="https://www.teleporthq.io">
+                        <a href="#">
                           <div class="navbar8-menu-item2">
                             <img
                               alt="image"
@@ -256,7 +255,7 @@
                             </div>
                           </div>
                         </a>
-                        <a href="https://www.teleporthq.io">
+                        <a href="#">
                           <div class="navbar8-menu-item3">
                             <img
                               alt="image"
@@ -281,7 +280,7 @@
                             </div>
                           </div>
                         </a>
-                        <a href="https://www.teleporthq.io">
+                        <a href="#">
                           <div class="navbar8-menu-item4">
                             <img
                               alt="image"
@@ -353,7 +352,7 @@
               </div>
               <div class="navbar8-container7 thq-box-shadow">
                 <div class="navbar8-link5-menu-list">
-                  <a href="https://www.teleporthq.io">
+                  <a href="#">
                     <div class="navbar8-menu-item5">
                       <img
                         alt="image"
@@ -378,7 +377,7 @@
                       </div>
                     </div>
                   </a>
-                  <a href="https://www.teleporthq.io">
+                  <a href="#">
                     <div class="navbar8-menu-item6">
                       <img
                         alt="image"
@@ -403,7 +402,7 @@
                       </div>
                     </div>
                   </a>
-                  <a href="https://www.teleporthq.io">
+                  <a href="#">
                     <div class="navbar8-menu-item7">
                       <img
                         alt="image"
@@ -428,7 +427,7 @@
                       </div>
                     </div>
                   </a>
-                  <a href="https://www.teleporthq.io">
+                  <a href="#">
                     <div class="navbar8-menu-item8">
                       <img
                         alt="image"
