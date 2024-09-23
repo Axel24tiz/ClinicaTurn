@@ -1,0 +1,34 @@
+Clinicaturn{
+*index.html
+*index.css
+*style.css
+-components{
+  *componentes del css
+}
+-config{
+  *database.php 
+}
+-controller{
+  *agendar.php
+  *buscar.php
+  *confirmarTurno.php
+  *selectObraSocial.php
+}
+-models{
+  *EspecialidadModel.php
+  *HorarioModel.php
+  *MedicoModel.php
+  *ObraSocialModel.php
+  *PacienteModel.php
+  *TurnoModel.php 
+}
+-views{
+  *citaconfirmadaView.php
+  *programarCitaView.php
+  *searchResultsView.php
+  *selectObraSocialView.php
+}
+*Readme.md
+-qr_codes{
+}
+}

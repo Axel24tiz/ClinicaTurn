@@ -1,0 +1,13 @@
+{
+  "name": "ornery-stunning-zebra",
+  "version": "1.0.1",
+  "private": true,
+  "dependencies": {
+    "parcel-bundler": "^1.6.1"
+  },
+  "scripts": {
+    "dev": "parcel frontend/index.html",
+    "build": "parcel build frontend/index.html"
+  },
+  "devDependencies": {}
+}
