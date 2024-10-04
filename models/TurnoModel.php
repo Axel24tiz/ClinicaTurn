@@ -29,6 +29,50 @@ class TurnoModel {
         }
     }
 
+        // Verificar si un día completo está ocupado
+        public function esDiaOcupado($id_medico, $fecha) {
+            try {
+                // Cuenta cuántos turnos tiene el médico en la fecha dada
+                $query = "SELECT COUNT(*) AS total_turnos FROM turno WHERE id_medico = :id_medico AND fecha = :fecha AND estado IN ('pendiente', 'confirmado')";
+                $stmt = $this->conn->prepare($query);
+                $stmt->bindParam(':id_medico', $id_medico, PDO::PARAM_INT);
+                $stmt->bindParam(':fecha', $fecha, PDO::PARAM_STR);
+                $stmt->execute();
+                
+                $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
+    
+                // Si el total de turnos es igual al máximo de turnos por ese día, el día está completamente ocupado
+                return ($resultado['total_turnos'] >= 8);  // Suponiendo que 8 es el máximo de turnos por día
+            } catch (PDOException $e) {
+                echo "Error al verificar si el día está ocupado: " . $e->getMessage();
+                return false;
+            }
+        }
+        
+        // Guardar un nuevo turno
+        public function guardarTurno($id_paciente, $id_medico, $tipo_turno, $fecha, $hora, $sobre_turno, $estado, $monto_a_pagar) {
+            try {
+                $query = "INSERT INTO turno (id_paciente, id_medico, tipo_turno, fecha, hora, sobre_turno, estado, monto_a_pagar) 
+                          VALUES (:id_paciente, :id_medico, :tipo_turno, :fecha, :hora, :sobre_turno, :estado, :monto_a_pagar)";
+                $stmt = $this->conn->prepare($query);
+    
+                $stmt->bindParam(':id_paciente', $id_paciente, PDO::PARAM_INT);
+                $stmt->bindParam(':id_medico', $id_medico, PDO::PARAM_INT);
+                $stmt->bindParam(':tipo_turno', $tipo_turno, PDO::PARAM_STR);
+                $stmt->bindParam(':fecha', $fecha, PDO::PARAM_STR);
+                $stmt->bindParam(':hora', $hora, PDO::PARAM_STR);
+                $stmt->bindParam(':sobre_turno', $sobre_turno, PDO::PARAM_BOOL);
+                $stmt->bindParam(':estado', $estado, PDO::PARAM_STR);
+                $stmt->bindParam(':monto_a_pagar', $monto_a_pagar, PDO::PARAM_STR);
+    
+                $stmt->execute();
+                return true;
+            } catch (PDOException $e) {
+                echo "Error al guardar turno: " . $e->getMessage();
+                return false;
+            }
+        }
+
     // Obtener un turno por ID
     public function obtenerTurnoPorId($id_turno) {
         try {
@@ -60,7 +104,7 @@ class TurnoModel {
             $stmt = $this->conn->prepare($query);
             $stmt->bindParam(':id_paciente', $id_paciente, PDO::PARAM_INT);
             $stmt->bindParam(':id_medico', $id_medico, PDO::PARAM_INT);
-            $stmt->bindParam(':fecha_hora', $fecha_hora, PDO::PARAM_STR); // Asegúrate de que el formato sea 'Y-m-d H:i:s'
+            $stmt->bindParam(':fecha_hora', $fecha_hora, PDO::PARAM_STR);
             $stmt->bindParam(':tipo_turno', $tipo_turno, PDO::PARAM_STR);
             $stmt->bindParam(':sobre_turno', $sobre_turno, PDO::PARAM_INT);
             $stmt->bindParam(':monto_a_pagar', $monto_a_pagar, PDO::PARAM_STR);
@@ -103,7 +147,6 @@ class TurnoModel {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    // Actualizar el estado de un turno
     public function actualizarEstado($id_turno, $nuevo_estado) {
         try {
             $query = "UPDATE " . $this->table_name . " SET estado = :estado WHERE id_turno = :id_turno";
@@ -114,21 +157,6 @@ class TurnoModel {
             return true;
         } catch (PDOException $e) {
             echo "Error al actualizar el estado del turno: " . $e->getMessage();
-            return false;
-        }
-    }
-
-    // Actualizar el QR de un turno (función que no manejarás por ahora)
-    public function actualizarQr($id_turno, $qr_code_path) {
-        try {
-            $query = "UPDATE " . $this->table_name . " SET qr_code = :qr_code WHERE id_turno = :id_turno";
-            $stmt = $this->conn->prepare($query);
-            $stmt->bindParam(':qr_code', $qr_code_path, PDO::PARAM_STR);
-            $stmt->bindParam(':id_turno', $id_turno, PDO::PARAM_INT);
-            $stmt->execute();
-            return true;
-        } catch (PDOException $e) {
-            echo "Error al actualizar el QR del turno: " . $e->getMessage();
             return false;
         }
     }

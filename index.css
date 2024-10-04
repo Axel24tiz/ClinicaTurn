@@ -905,9 +905,7 @@
 .home-text32 {
   display: inline-block;
 }
-<<<<<<< HEAD
 
-/* index.css */
 
 .confirmacion-turno {
   max-width: 600px;
@@ -946,8 +944,6 @@
   background-color: #e67e22;
 }
 
-=======
->>>>>>> 10a81a14d4dd92b8348fdd5a83b9b7c92473cbda
 @media(max-width: 991px) {
   .features24-container2 {
     grid-gap: var(--dl-space-space-twounits);

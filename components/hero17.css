@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 * {
   box-sizing: border-box;
 }
@@ -73,8 +72,6 @@ label {
 }
 
 
-=======
->>>>>>> 10a81a14d4dd92b8348fdd5a83b9b7c92473cbda
 .hero17-header78 {
   gap: var(--dl-space-space-threeunits);
   width: 100%;
@@ -248,7 +245,6 @@ label {
   display: inline-block;
 }
 @media(max-width: 767px) {
-<<<<<<< HEAD
   .search-container {
     flex-direction: column;
     align-items: stretch;
@@ -265,14 +261,11 @@ label {
 .search-container button {
     width: 100%;
 }  
-=======
->>>>>>> 10a81a14d4dd92b8348fdd5a83b9b7c92473cbda
   .hero17-content2 {
     width: 100%;
   }
 }
 @media(max-width: 479px) {
-<<<<<<< HEAD
   .search-container {
     max-width: 100%;
     padding: 0 15px;
@@ -292,8 +285,6 @@ label {
     padding: 8px;
     font-size: 14px;
 }
-=======
->>>>>>> 10a81a14d4dd92b8348fdd5a83b9b7c92473cbda
   .hero17-actions {
     width: 100%;
     flex-direction: column;

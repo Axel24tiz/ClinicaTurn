@@ -1,5 +1,6 @@
 <?php
 require_once '../config/database.php';
+require_once '../models/HorarioModel.php'; 
 
 $id_medico = $_GET['id_medico'] ?? 0;
 $fecha = $_GET['fecha'] ?? '';
@@ -9,7 +10,22 @@ if (empty($id_medico) || empty($fecha)) {
     exit;
 }
 
+$horarioModel = new HorarioModel($conn);
+
 try {
+    // Verificar si la fecha es un feriado
+    if ($horarioModel->esFeriado($fecha)) {
+        echo json_encode(['disponible' => false, 'mensaje' => 'La fecha seleccionada es un feriado.']);
+        exit;
+    }
+
+    // Verificar si la fecha es anterior a la fecha actual
+    $fecha_actual = (new DateTime())->format('Y-m-d');
+    if ($fecha < $fecha_actual) {
+        echo json_encode(['disponible' => false, 'mensaje' => 'No se pueden agendar turnos en fechas pasadas.']);
+        exit;
+    }
+
     // Verificar si el médico trabaja ese día
     $query_horarios = "SELECT hora_inicio, hora_fin FROM horariomedico WHERE id_medico = :id_medico AND dia_semana = DAYOFWEEK(:fecha) - 1";
     $stmt = $conn->prepare($query_horarios);

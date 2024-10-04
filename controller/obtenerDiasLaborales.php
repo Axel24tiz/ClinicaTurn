@@ -32,16 +32,15 @@ try {
     echo "Error: " . $e->getMessage();
 }
 
-// Función para obtener la próxima fecha de un día de la semana
 function obtenerFechaProxima($dia_semana) {
     $dias = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
     $hoy = date('N') - 1; // N: día de la semana (1: Lunes, 7: Domingo)
     $dia_objetivo = array_search($dia_semana, $dias);
 
-    // Calcular la diferencia de días
+    // Calcula la diferencia de días
     $diferencia = $dia_objetivo - $hoy;
     if ($diferencia < 0) {
-        $diferencia += 7; // Ajustar para la próxima semana
+        $diferencia += 7; // Ajusta para la próxima semana
     }
 
     return date('Y-m-d', strtotime("+$diferencia days"));

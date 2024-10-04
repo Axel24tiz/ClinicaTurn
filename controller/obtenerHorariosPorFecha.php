@@ -7,7 +7,7 @@ $fecha = isset($_GET['fecha']) ? $_GET['fecha'] : '';
 
 if ($id_medico > 0 && !empty($fecha)) {
     $horarioModel = new HorarioModel($conn);
-    $diaSemana = date('l', strtotime($fecha));  // Obtener el día de la semana para la fecha seleccionada
+    $diaSemana = date('l', strtotime($fecha));  // Obtiene el día de la semana para la fecha seleccionada
     $horarios = $horarioModel->obtenerHorariosPorDiaSemana($id_medico, $diaSemana);
 
     if (!empty($horarios)) {

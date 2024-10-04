@@ -139,24 +139,24 @@ $coberturas = $obraSocialModel->obtenerObrasSociales();
                   </div>
                 </nav>
                 <div class="navbar8-buttons1">
+                <a href="#">
                   <button
-                    class="navbar8-action11 thq-button-animated thq-button-filled"
-                  >
+                    class="navbar8-action11 thq-button-animated thq-button-filled">
                     <span class="thq-body-small">
                       <fragment class="home-fragment18">
-                        <span class="home-text18">Comenzar</span>
+                        <span class="home-text18">Sesion Administrativa</span>
                       </fragment>
                     </span>
                   </button>
-                  <button
-                    class="navbar8-action21 thq-button-outline thq-button-animated"
-                  >
+                </a>
+                  <!--<button
+                    class="navbar8-action21 thq-button-outline thq-button-animated">
                     <span class="thq-body-small">
                       <fragment class="home-fragment19">
                         <span class="home-text19">Accion secundaria</span>
                       </fragment>
                     </span>
-                  </button>
+                  </button>-->
                 </div>
               </div>
               <div data-thq="thq-burger-menu" class="navbar8-burger-menu">
@@ -183,7 +183,7 @@ $coberturas = $obraSocialModel->obtenerObrasSociales();
                     </div>
                   </div>
                   <nav class="navbar8-links2">
-                    <a href="#">
+                    <a href="">
                       <fragment class="home-fragment10">
                         <span class="home-text10 thq-link thq-body-small">
                           Inicio
@@ -420,7 +420,7 @@ $coberturas = $obraSocialModel->obtenerObrasSociales();
                                 <div class="input-group">
                                   <label for="obra_social">Cobertura Médica</label>
                                   <select id="obra_social" name="obra_social">
-                                  <option value="" selected disabled>Selecciona una cobertura médica</option>
+                                  <option value="" selected disabled>Selecciona una obra social</option>
                                   <?php foreach ($coberturas as $cobertura): ?>
                                     <option value="<?php echo htmlspecialchars($cobertura['id_obra_social']); ?>"
                                     <?php if (isset($_GET['obra_social']) && $_GET['obra_social'] == $cobertura['id_obra_social']) echo 'selected'; ?>>
@@ -429,8 +429,9 @@ $coberturas = $obraSocialModel->obtenerObrasSociales();
                                     <?php endforeach; ?>
                                   </select>
                                 </div>
+                                <button class="btn-naranja" type="submit">Buscar</button>
+
                               </div>
-                              <button class="btn-naranja" type="submit">Buscar</button>
                             </form>
                           </div>
                         </div>
