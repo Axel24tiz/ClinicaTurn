@@ -49,8 +49,8 @@ curl_close($ch);
 <head>
     <meta charset="UTF-8">
     <title>Agendar Turno</title>
-    <link rel="stylesheet" href="../index.css">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../clinicaindex.css">
+    <link rel="stylesheet" href="../clinicastyle.css">
     
     <!-- Bootstrap CSS (para el modal) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -306,7 +306,7 @@ $('#agendarForm').on('submit', function(event) {
             // Feriados
             { events: eventosFeriados, color: '#281002', textColor: '#000' },
             { url: '../controller/obtenerDiasLaborales.php', color: '#008000', textColor: '#FFF', allDay: true },
-            { url: '../controller/obtenerTurnosOcupados.php', color: '#FF0000', textColor: '#FFF', allDay: false }
+            { url: '../controller/obtenerTurnosOcupados.php', color: '#FF0000', textColor: '#FFF', allDay: true }
         ],
         dateClick: function(info) {
             var fechaSeleccionada = info.dateStr;

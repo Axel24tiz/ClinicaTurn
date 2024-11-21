@@ -3,6 +3,7 @@ require_once '../config/database.php';
 require_once '../models/EspecialidadModel.php';
 require_once '../models/ObraSocialModel.php';
 
+
 $especialidadModel = new EspecialidadModel($conn);
 $especialidades = $especialidadModel->obtenerEspecialidades();
 

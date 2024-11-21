@@ -1,0 +1,9 @@
+turnos
+id_tuno
+id_medico
+id_paciente
+fecha
+hora
+estado enum('pendiente', 'confirmado', 'cancelado') 
+monto_pagar decimal(10,2) 
+sobre_turno tinyint(1) 

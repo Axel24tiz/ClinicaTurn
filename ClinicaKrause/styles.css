@@ -1,0 +1,84 @@
+* {
+	margin: 0; 
+	padding: 0;
+}
+
+html{
+    height: 100%;
+}
+
+.formulario{
+    width: 500px;
+	
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+/* Establece el tamaño del cuadro modal */
+body {
+    box-sizing: border-box;
+    /* background: linear-gradient(#6190E8,30%, #A7BFE8 ); */
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+
+}
+
+/* Posiciona el botón en el centro de la página */
+.btn {
+    display: block;
+    margin: 0 auto;
+	
+}
+
+/* Posiciona el modal en el centro de la página */
+#popUpBox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Asegura que el modal esté por encima de otros elementos */
+    display: none; /* Inicialmente oculto */
+}
+
+.fila:hover{
+    color: aliceblue;
+    background-color:rgb(163, 162, 248);
+}
+
+.boxshadow{
+    box-shadow: 20px 20px 20px #000000;
+}
+
+.fondo {
+    background: linear-gradient(#6190E8,30%, #A7BFE8 ); 
+    /* background: linear-gradient(to right, #A7BFE8, #6190E8); */    
+}
+
+footer {
+    /* position:inherit; */
+    margin-top: auto;
+    bottom: 0;
+    width: 100%;
+    height: 80px; /* Altura del pie de página */
+    /*background-color: #333;
+    color: #fff;*/
+    text-align: center;
+    line-height: 0px;
+}
+
+.titulo {
+    /* margin-bottom: 20px; */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: white;
+    /* align-items: center; */
+    /* align-content: center; */
+    text-align: center;
+  }
+
+.image {
+    background-image: url(img/instituto_2.png);
+    border-image: fill 0 linear-gradient(#0003, #000);
+}

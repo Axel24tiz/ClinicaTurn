@@ -1,0 +1,281 @@
+/* Global */
+* {
+    box-sizing: border-box;
+    padding: 0;
+  }
+  
+  html , body {
+    position: relative;
+    width: 100%;
+    /*font-family: "Oswald", sans-serif;*/
+    background-color: #ffffff;
+    /* Pattern from https://www.heropatterns.com/ */
+    /*background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='105' viewBox='0 0 80 105'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='death-star' fill='%23540606' fill-opacity='0.4'%3E%3Cpath d='M20 10a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm15 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zM20 75a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zm30-65a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm0 65a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zM35 10a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zM5 45a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zm60 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");*/
+    color: #545455;
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .content{
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  div .il{
+
+    display: inline-block;
+    width: 100%;
+  }
+
+  #cta {
+    background: #eb3232;
+    color: #fff !important;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0.5em 1.2em;
+  }
+  #cta:hover {
+    color: #3f3e3e !important;
+    background: #ffffff;
+    padding: 0.5em 1.2em;
+    border: 2px solid;
+    border-color: #eb3232;
+    transition: all 1s ease;
+
+    
+  }
+  
+  
+  #excel{
+
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #0e721f;
+    border-radius: 6px;
+    border: 2px solid #00b035;
+  }
+  #pdf{
+
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #e01d16;
+    border-radius: 6px;
+    border: 2px solid #b92323;
+  }
+
+  #print{
+
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #2864e6;
+    border-radius: 6px;
+    border: 2px solid #2195c4;
+  }
+
+  img{
+
+    width: 100%;
+    
+  }
+
+  div .wrapper{
+    
+    height: 100%;
+    width: 100%;
+     }
+
+  #navbar{
+      position: relative;
+      width: 100%;
+    }
+
+  div .table-responsive{
+
+    position: relative;
+    width: 100%;
+    color: black;
+  }
+
+  #mydatatable-container{
+
+    position: relative;
+    background-color: white;
+    width: 100%;
+  
+  }
+
+  #mydatatable tfoot input{
+    position: relative;
+    width: 100% !important;
+    background-color: white;
+  }
+
+  #mydatatable tfoot {
+    position: relative;
+    width: 100% !important;
+    display: table-header-group !important;
+    background-color: white;
+  }
+ 
+  #mydatatable{
+    
+    position: relative;
+    width:100%;
+
+  }
+  #tabletitle{
+
+    width: 100% !important;
+    text-align: center;
+    position: relative;
+    margin-left: 430px;
+  }
+
+
+
+
+
+
+h4{
+  color: rgb(0, 0, 0);
+
+}
+
+h5{
+
+  color: rgb(0, 0, 0);
+}
+
+h3{
+
+  color: rgb(0, 0, 0);
+}
+
+label{
+  color: #000000;
+
+}
+
+#ant {
+
+  color: #000000;
+
+}
+
+#sig {
+  color: #000000;
+
+}
+
+label.d {
+
+  font-size: medium;
+  color: black;
+}
+
+label.cb:hover {
+  background: rgb(255, 255, 255);
+  cursor: pointer;
+  border-style: dashed;
+
+}
+
+  #izquierda{
+    float:left;
+    width:100%;
+  }
+
+  #derecha{
+    float:left;
+    width:100%;
+  }
+
+footer .footerimg {
+
+  width: 80%;
+
+}
+
+.font{
+  margin-top: -60px;
+}
+
+#copyright{
+
+  margin-top: 50px;
+
+}
+
+.bn12 {
+  display: inline-block;
+  padding: 0.65em 1.6em;
+  border: 3px solid #1981aa;
+  margin-left: 40px;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #000000;
+  text-align: center;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.bn12:hover {
+  background-color: rgb(18, 158, 201);
+  color: #ffffff;
+}
+
+
+
+@keyframes bn12bouncy {
+  0% {
+    top: 0em;
+  }
+  40% {
+    top: 0em;
+  }
+  43% {
+    top: -0.9em;
+  }
+  46% {
+    top: 0em;
+  }
+  48% {
+    top: -0.4em;
+  }
+  50% {
+    top: 0em;
+  }
+  100% {
+    top: 0em;
+  }
+}
+
+/* .image {
+  border-image: fill 0 linear-gradient(#0003, #000);
+  background: linear-gradient(#0003,30%, #000 );
+  vertical-align: bottom;
+  background-image: url(img/instituto_2.png), linear-gradient(to bottom,yellow,white);
+} */
+
+/* .layered-image {
+  background: linear-gradient(to right, transparent, mistyrose),
+    url("img/instituto_2.png");
+} */
+
+#imagen-fondo {
+  background-image: url("./img/instituto_2.png");
+     }
+
+
